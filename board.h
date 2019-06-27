@@ -8,9 +8,9 @@ class Board
 public:
     void initBoard();
     void printBoard();
-    char* getBoard();
+    char** getBoard();
 
 private:
     //fixes board size
-    char board[3][3];
+    char** board[3][3];
 };

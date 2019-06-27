@@ -8,7 +8,7 @@ void Board::initBoard()
 {
     for (int y = 0; y < 3; y++){
         for (int x = 0; x < 3; x++){
-            board[y][x] = '.';
+            **board[y][x] = '.';
         }
     }
 }
@@ -30,7 +30,7 @@ void Board::printBoard()
     }
 }
 
-char Board::getBoard()
+char** Board::getBoard()
 {
     return board[3][3];
 }
