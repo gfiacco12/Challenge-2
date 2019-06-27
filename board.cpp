@@ -32,5 +32,5 @@ void Board::printBoard()
 
 char** Board::getBoard()
 {
-    return board[3][3];
+    return this-> board[3][3];
 }
