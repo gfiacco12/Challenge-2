@@ -17,7 +17,7 @@ void Player::playerStats()
     this-> symbol = playerSymbol;
 }
 
-void Player::playerMove(char playerSymbol, char board[3][3])
+void Player::playerMove(char playerSymbol, char* board)
 {
     int xcoord;
     int ycoord;
@@ -27,12 +27,12 @@ void Player::playerMove(char playerSymbol, char board[3][3])
     cout << "Enter the y coordinate of your move: " << endl;
     cin >> ycoord;
 
-    board[ycoord][xcoord] = playerSymbol;
-    cout << board[ycoord][xcoord];
-
+    int index = getIndex(xcoord, ycoord, 3);
+    board[index] = playerSymbol;
+    cout << board[index];
 }
 
-bool Player::checkWin(string name, char playerSymbol, char board[3][3])
+bool Player::checkWin(string name, char playerSymbol, char* board)
 {
 //first check to see if the first row is all the same symbol
     if ((board[0][0] = playerSymbol) && (board[0][1] = playerSymbol) && (board[0][2] = playerSymbol)) {

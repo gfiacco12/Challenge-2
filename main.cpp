@@ -2,7 +2,7 @@
 #include <string>
 #include "board.h"
 #include "player.h"
-
+#include "utilities.cpp"
 using namespace std;
 
 int x;
@@ -24,10 +24,10 @@ int main()
     bool isDone = false;
 
     while (isDone == false) {
-        player1.playerMove(player1.getSymbol(), board.getValue(pointerToArray, x, y, 3));
-        isDone = player1.checkWin(player1.getName(), player1.getSymbol(), board.getBoard());
-        player2.playerMove(player2.getSymbol(), board.getBoard());
-        isDone = player2.checkWin(player2.getName(), player2.getSymbol(), board.getBoard());
+        player1.playerMove(player1.getSymbol(), pointerToArray);
+        isDone = player1.checkWin(player1.getName(), player1.getSymbol(), pointerToArray);
+        player2.playerMove(player2.getSymbol(), pointerToArray);
+        isDone = player2.checkWin(player2.getName(), player2.getSymbol(), pointerToArray);
     }
    
     cin.get();
