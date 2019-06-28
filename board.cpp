@@ -8,7 +8,7 @@ void Board::initBoard()
 {
     for (int y = 0; y < 3; y++){
         for (int x = 0; x < 3; x++){
-            **board[y][x] = '.';
+            board[y][x] = '.';
         }
     }
 }
@@ -30,7 +30,13 @@ void Board::printBoard()
     }
 }
 
-char** Board::getBoard()
+char* Board::getBoard()
 {
-    return this-> board[3][3];
+    return *(this-> board);
+}
+
+//turns the board into a one-D array, easier to access
+int getValue(char* board, int x, int y, int size)
+{
+    return board[x + (size * y)];
 }
