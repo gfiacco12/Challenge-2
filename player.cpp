@@ -3,6 +3,7 @@
 #include "board.h"
 #include "player.h"
 
+
 void Player::playerStats()
 {
     string name; 
@@ -35,37 +36,37 @@ void Player::playerMove(char playerSymbol, char* board)
 bool Player::checkWin(string name, char playerSymbol, char* board)
 {
 //first check to see if the first row is all the same symbol
-    if ((board[0][0] = playerSymbol) && (board[0][1] = playerSymbol) && (board[0][2] = playerSymbol)) {
+    if ((board[getIndex(0, 0, 3)] = playerSymbol) && (board[getIndex(1, 0, 3)] = playerSymbol) && (board[getIndex(2, 0, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     }
-    else if ((board[1][0] = playerSymbol) && (board[1][1] = playerSymbol) && (board[1][2] = playerSymbol)) {
+    else if ((board[getIndex(0, 1, 3)] = playerSymbol) && (board[getIndex(1, 1, 3)] = playerSymbol) && (board[getIndex(2, 1, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     }
-    else if ((board[2][0] = playerSymbol) && (board[2][1] = playerSymbol) && (board[2][2] = playerSymbol)) {
+    else if ((board[getIndex(0, 2, 3)] = playerSymbol) && (board[getIndex(1, 2, 3)] = playerSymbol) && (board[getIndex(2, 2, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     }
     //check vertical columns
-    else if ((board[0][0] = playerSymbol) && (board[1][0] = playerSymbol) && (board[2][0] = playerSymbol)) {
+    else if ((board[getIndex(0, 0, 3)] = playerSymbol) && (board[getIndex(0, 1, 3)] = playerSymbol) && (board[getIndex(0, 2, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     }
-    else if ((board[0][1] = playerSymbol) && (board[1][1] = playerSymbol) && (board[2][1] = playerSymbol)) {
+    else if ((board[getIndex(1, 0, 3)] = playerSymbol) && (board[getIndex(1, 1, 3)] = playerSymbol) && (board[getIndex(1, 2, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     }
-    else if ((board[1][0] = playerSymbol) && (board[1][1] = playerSymbol) && (board[1][2] = playerSymbol)) {
+    else if ((board[getIndex(2, 0, 3)] = playerSymbol) && (board[getIndex(2, 1, 3)] = playerSymbol) && (board[getIndex(2, 2, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     }
     //check diagonals
-    else if ((board[0][0] = playerSymbol) && (board[1][1] = playerSymbol) && (board[2][2] = playerSymbol)) {
+    else if ((board[getIndex(0, 0, 3)] = playerSymbol) && (board[getIndex(1, 1, 3)] = playerSymbol) && (board[getIndex(2, 2, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     }
-    else if ((board[0][2] = playerSymbol) && (board[1][1] = playerSymbol) && (board[2][0] = playerSymbol)) {
+    else if ((board[getIndex(2, 0, 3)] = playerSymbol) && (board[getIndex(1, 1, 3)] = playerSymbol) && (board[getIndex(0, 2, 3)] = playerSymbol)) {
         cout << "Congratulations! Player " << name << "won the game!" << endl;
         return true;
     } else {

@@ -36,7 +36,12 @@ char* Board::getBoard()
 }
 
 //turns the board into a one-D array, easier to access
-int getValue(char* board, int x, int y, int size)
+int getValue(char* pointer, int x, int y, int size)
 {
-    return board[x + (size * y)];
+    return pointer[x + (size * y)];
+}
+
+int getIndex(int x, int y, int size)
+{
+    return x + (size * y);
 }

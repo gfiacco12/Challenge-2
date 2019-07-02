@@ -2,7 +2,7 @@
 #include <string>
 #include "board.h"
 #include "player.h"
-#include "utilities.cpp"
+
 using namespace std;
 
 int x;
