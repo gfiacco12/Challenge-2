@@ -3,7 +3,6 @@
 #include "board.h"
 #include "player.h"
 
-
 void Player::playerStats()
 {
     string name; 

@@ -41,6 +41,7 @@ int getValue(char* pointer, int x, int y, int size)
     return pointer[x + (size * y)];
 }
 
+//gets the index
 int getIndex(int x, int y, int size)
 {
     return x + (size * y);

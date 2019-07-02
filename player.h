@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-
+//ugh
 class Player
 {
 public:
